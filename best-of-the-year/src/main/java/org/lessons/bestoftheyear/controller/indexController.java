@@ -19,9 +19,11 @@ public class indexController {
     public String index(Model model) {
         String name = "Loris";
         model.addAttribute("nome",name);
+        List<Movie> bestMovies = getBestMovies(); //per oggetti
 //        String moviesString = String.join(", ", getBestMovies());
         String songsString = String.join(", ", getBestSongs());
 //        model.addAttribute("movies", moviesString);
+        model.addAttribute("movies", bestMovies); //per oggetti
         model.addAttribute("songs", songsString);
         return "home";
     }
@@ -37,6 +39,7 @@ public class indexController {
         List<Movie> bestMovies = getBestMovies();
         model.addAttribute("movies", bestMovies);
         return "movies";
+        //per oggetti
     }
 
     @GetMapping("songs")

@@ -7,12 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movies</title>
 </head>
+<style>
+    .redColor{
+        color:red;
+    }
+</style>
 <body>
 <h2>Movies</h2>
-<!--    <h3 th:text="${movies}"></h3>-->
+<!--per stringhe-->
+<!--    <h3 th:text="${movies}"></h3>  -->
     <div>
         <h2 class="redColor">My best Movies</h2>
         <ul>
+<!-- per oggetti -->
             <li th:each="movie : ${movies}">
                 <img th:src="${movie.urlImage}" alt="" >
                 <h3 th:text="|Name: ${movie.name}|"></h3>

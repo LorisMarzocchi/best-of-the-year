@@ -28,5 +28,15 @@
 <!--    <h3 th:text="${movies}"></h3>-->
     <h2 class="redColor">My best Songs</h2>
     <h3 th:text="${songs}"></h3>
+
+    <ul>
+
+        <li th:each="movie : ${movies}">
+<!--            <img th:src="${movie.urlImage}" alt="" >-->
+            <h3 th:text="|Name: ${movie.name}|"></h3>
+            <p th:text="|Description: ${movie.description}|"></p>
+            <p th:text="|Duration: ${movie.duration} minutes|"></p>
+        </li>
+    </ul>
 </body>
 </html>
