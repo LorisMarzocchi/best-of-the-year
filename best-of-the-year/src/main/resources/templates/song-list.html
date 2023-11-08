@@ -4,10 +4,9 @@
 
 <body>
 <nav th:replace="~{/fragments/navbar :: topNavbar('song-list')}"></nav>
-<h2>My best Songs List</h2>
 <!--<h3 th:text="|My best Songs: ${songs}"></h3>-->
+<h2 class="redColor text-center">My best Songs</h2>
 <div class="container">
-    <h2 class="color-warning">My best Movies List</h2>
     <ul>
         <!-- per oggetti -->
         <li th:each="song : ${songs}">

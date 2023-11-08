@@ -2,25 +2,20 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:insert="~{/fragments/resources :: headResources('movie-list')}"></head>
 
-<style>
-    .redColor{
-        color:red;
-    }
-</style>
 <body>
-<nav th:replace="/fragments/navbar :: topNavbar('movie-list')"></nav>
+<nav th:replace="~{/fragments/navbar :: topNavbar('movie-list')}"></nav>
 
 <!--per stringhe-->
 <!--    <h3 th:text="${movies}"></h3>-->
+    <h2 class="redColor text-center">My best Movies</h2>
     <div class="container">
-        <h2 class="redColor">My best Movies List</h2>
         <ul>
 <!-- per oggetti -->
             <li th:each="movie : ${movies}">
                 <a th:href="@{|/movies/${movie.id}|}">
-                        <p th:text="|ID: ${movie.id}|"></p>
+                    <p th:text="|ID: ${movie.id}|"></p>
                 </a>
-                        <h3 th:text="|Name: ${movie.name}|"></h3>
+                <h3 th:text="|Name: ${movie.name}|"></h3>
                        
             </li>
         </ul>

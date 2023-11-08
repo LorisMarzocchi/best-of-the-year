@@ -2,9 +2,9 @@
 <body>
 <nav th:fragment="topNavbar(area)" class="navbar navbar-expand-lg">
     <div class="container-fluid">
-<!--        <a class="navbar-brand" th:href="@{/home}">-->
-<!--            <img th:src="@{/logo.png}" alt="application logo">-->
-<!--        </a>-->
+        <a class="navbar-brand" th:href="@{/home}">
+            <img th:src="@{/icons8-old-vmware-logo-24.png}" alt="application logo">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -17,11 +17,11 @@
                        th:href="@{/home}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:classAppend="${area == 'movies' ? 'active' : ''}"
+                    <a class="nav-link" th:classAppend="${area == 'movie-list' ? 'active' : ''}"
                        th:href="@{/movies}">Movies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:classAppend="${area == 'songs' ? 'active' : ''}"
+                    <a class="nav-link" th:classAppend="${area == 'song-list' ? 'active' : ''}"
                        th:href="@{/songs}">Songs</a>
                 </li>
             </ul>

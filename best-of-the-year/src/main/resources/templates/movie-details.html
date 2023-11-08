@@ -16,7 +16,7 @@
         <div th:if="${movie == null}">
             Unable to find student
         </div>
-        <a th:href="@{/movies}">Back to movie list</a>
+        <a class="backTo" th:href="@{/movies}">Back to movie list</a>
     </div>
     <th:block th:replace="~{/fragments/resources :: jsResources}"></th:block>
 </body>

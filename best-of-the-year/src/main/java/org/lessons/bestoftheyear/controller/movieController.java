@@ -46,4 +46,25 @@ public class movieController {
         }
         return null;
     }
+
+    //    @GetMapping("movies")
+//    public String movies(Model model){
+//        List<String> bestMovies = getBestMovies();
+//        String moviesString = String.join(" , ", bestMovies);
+//        model.addAttribute("movies",moviesString);
+//        return "movies";
+    //PER STRINGHE
+//    }
+    // Metodo privato per recuperare i migliori film
+//    private List<String> getBestMovies() {
+//        List<String> movies = new ArrayList<>();
+//        movies.add("Il Padrino");
+//        movies.add("Shawshank Redemption");
+//        movies.add("Forrest Gump");
+//        movies.add("Il Cavaliere Oscuro");
+//        return movies;
+//    }
+//    private List<String> getBestMovies() {
+//        return List.of("Il Padrino", "Shawshank Redemption", "Forrest Gump", "Il Cavaliere Oscuro");
+//    }
 }
