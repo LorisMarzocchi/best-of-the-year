@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:insert="/fragments/resources :: headResources('song-list')"></head>
+<head th:insert="~{/fragments/resources :: headResources('song-list')}"></head>
 
 <body>
-<nav th:replace="/fragments/navbar :: topNavbar('song-list')"></nav>
+<nav th:replace="~{/fragments/navbar :: topNavbar('song-list')}"></nav>
 <h2>My best Songs List</h2>
 <!--<h3 th:text="|My best Songs: ${songs}"></h3>-->
 <div class="container">
@@ -21,6 +21,6 @@
 </div>
 
 
-<th:block th:replace="/fragments/resources :: jsResources"></th:block>
+<th:block th:replace="~{/fragments/resources :: jsResources}"></th:block>
 </body>
 </html>

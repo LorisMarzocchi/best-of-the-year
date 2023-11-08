@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:insert="/fragments/resources :: headResources('movie-list')"></head>
+<head th:insert="~{/fragments/resources :: headResources('movie-list')}"></head>
 
 <style>
     .redColor{
@@ -26,6 +26,6 @@
         </ul>
     </div>
 
-    <th:block th:replace="/fragments/resources :: jsResources"></th:block>
+    <th:block th:replace="~{/fragments/resources :: jsResources}"></th:block>
 </body>
 </html>

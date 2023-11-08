@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:insert="/fragments/resources :: headResources('movie-detail')"></head>
+<head th:insert="~{/fragments/resources :: headResources('movie-detail')}"></head>
 <body>
 
-<nav th:replace="/fragments/navbar :: topNavbar('movie-detail')"></nav>
+<nav th:replace="~{/fragments/navbar :: topNavbar('movie-detail')}"></nav>
 
     <div class="container">
         <h1>Student detail</h1>
@@ -18,5 +18,5 @@
         </div>
         <a th:href="@{/movies}">Back to movie list</a>
     </div>
-    <th:block th:replace="/fragments/resources :: jsResources"></th:block>
+    <th:block th:replace="~{/fragments/resources :: jsResources}"></th:block>
 </body>
