@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="/fragments/resources :: headResources('song-detail')"></head>
+<body>
+
+<nav th:replace="/fragments/navbar :: topNavbar('song-detail')"></nav>
+
+<div class="container">
+    <h1>Student detail</h1>
+    <div th:if="${song != null}">
+        <p th:text="|ID: ${song.id}|"></p>
+        <p th:text="|Name: ${song.name}|"></p>
+        <p th:text="|Artist: ${song.artist}|"></p>
+    </div>
+    <div th:if="${song == null}">
+        Unable to find student
+    </div>
+    <a th:href="@{/songs}">Back to songs list</a>
+</div>
+<th:block th:replace="/fragments/resources :: jsResources"></th:block>
+</body>

@@ -1,24 +1,25 @@
 package org.lessons.bestoftheyear.model;
 
 public class Movie {
+
+    private String id;
     private String name;
     private String description;
     private int duration;
-    private String urlImage;
 
-    public Movie(String name, String description, int duration, String urlImage) {
+    public Movie(String id, String name, String description, int duration) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.duration = duration;
-        this.urlImage = urlImage;
     }
-    public String getUrlImage() {
-        return urlImage;
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void setUrlImage(String urlImage) {
-        this.urlImage = urlImage;
-    }
 
     // Getters e setters
     public String getName() {
